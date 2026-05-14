@@ -26,6 +26,11 @@ export default function AuthCallback() {
             try {
                 const { data: existing, error: selectError } = await supabase.from('user').select().eq('id', user.id).single();
 
+                if (selectError) {
+                    console.error("사용자 테이블 조회 중 오류:", selectError);
+                    return;
+                }
+
                 if (!existing) {
                     const { error: insertError } = await supabase
                         .from('user')
