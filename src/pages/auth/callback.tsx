@@ -39,9 +39,8 @@ export default function AuthCallback() {
 
         // 이 useEffect는 OAuth 리디렉션 후에 실행
         // URL의 "code"나 해시를 통해 Supabase 세션이 이미 저장된 상태일 것
+        handleAuthCallback()
     }, [navigate])
-
-
     return <main className="w-full h-full min-h-[720px] flex items-center justify-center">로그인 진행 중</main>
 }
 
