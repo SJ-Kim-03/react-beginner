@@ -1,6 +1,6 @@
 import { useNavigate, useSearchParams } from "react-router";
 import { AppDraftsDialog, AppSideBar } from "../components/common";
-import { SkeletonHotTopic, SkeletonNewTopic } from "../components/skeleton";
+import { SkeletonHotTopic } from "../components/skeleton";
 import { Button } from "../components/ui/button";
 import { CircleSmall, NotebookPen, PencilLine } from "lucide-react";
 import { useAuthStore } from "@/stores";
